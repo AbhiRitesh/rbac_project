@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const MongoStore = connectMongo(session);
+const MongoStore = new connectMongo(session);
 // Init Session
 app.use(
   session({
